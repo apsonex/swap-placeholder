@@ -1,0 +1,65 @@
+{
+    "name": "apsonex/swap-placeholder",
+    "license": "MIT",
+    "description": "Swap Placeholder",
+    "keywords": [
+        "Apsonex",
+        "Placeholder"
+    ],
+    "homepage": "https://apsonex.com",
+    "authors": [
+        {
+            "name": "Apsonex Inc.",
+            "email": "info@apsonex.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Gurinder Chauhan",
+            "email": "gurinder@apsonex.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "illuminate/collections": "^12.21",
+        "illuminate/pipeline": "^12.21",
+        "illuminate/support": "^12.21"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.24",
+        "pestphp/pest": "^3.8",
+        "phpunit/phpunit": "^11.5",
+        "symfony/var-dumper": "^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Apsonex\\SwapPlaceholder\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        },
+        "preferred-install": {
+            "*": "dist"
+        },
+        "secure-http": true,
+        "github-protocols": [
+            "https"
+        ]
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
