@@ -24,7 +24,7 @@ composer require apsonex/swap-placeholder
 
 ## 🧠 Usage Example
 
-'''php
+```php
 \Apsonex\SwapPlaceholder\SwapPlaceholder::make()
     ->fresh()
     ->placeholderIdentity('__')
@@ -35,7 +35,7 @@ composer require apsonex/swap-placeholder
     ->targetString('Some string with __LEAD_NAME__, __LEAD_EMAIL__, __COMPANY_NAME__ & __COMPANY_EMAIL__')
     ->handle()
     ->output();
-'''
+```
 
 ---
 
@@ -43,7 +43,7 @@ composer require apsonex/swap-placeholder
 
 Each resolver class should extend the `BasePlaceholderResolver` and implement the `PlaceholderResolverContract`.
 
-'''php
+```php
 <?php
 
 namespace App\Support\PlaceholderResolver;
@@ -58,13 +58,13 @@ class LeadPlaceholderResolver extends Base implements PlaceholderResolverContrac
 
     // Optionally override methods to define how placeholders are resolved
 }
-'''
+```
 
 ---
 
 ## ✅ Testing Example
 
-'''php
+```php
 it('swap_placeholder_works', function () {
     $output = Apsonex\SwapPlaceholder\SwapPlaceholder::make()
         ->fresh()
@@ -83,7 +83,7 @@ it('swap_placeholder_works', function () {
         $output === 'Some string with John Doe, email@example.com, Abc Inc. & info@company.com'
     )->toBeTrue();
 });
-'''
+```
 
 ---
 
